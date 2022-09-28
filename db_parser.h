@@ -31,7 +31,7 @@ public:
 };
 
 /**
- * Main parser utilizing section parsers to do most
+ *  Main parser utilizing section parsers to do most
  *  of the actual parsing.  Breaks the database into
  *  sections and handle error output
  */
