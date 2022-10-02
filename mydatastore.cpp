@@ -270,18 +270,3 @@ void Mydatastore::setupKeywordMap(Product* P)
 	return;
 }
 
-// Product* findProduct(std::string)
-// {
-// 	for(set<Product*>::iterator it = Store_products_.begin();
-// 			it != Store_products_.end();
-// 			++it)
-// 	{
-// 		if((*it)->getName()==Username)
-// 		{
-// 			return *it;
-// 		}
-// 	}
-// 	cout<<"Can't find the user"<<end;
-// 	return nullptr;
-// }
-
