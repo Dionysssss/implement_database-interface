@@ -32,6 +32,7 @@ void DBParser::addSectionParser(const std::string& sectionName,
 {
     parsers_.insert(make_pair(sectionName, parser));
 }
+
 bool DBParser::parse(string db_filename, DataStore& ds)
 {
 #ifdef DEBUG

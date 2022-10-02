@@ -6,8 +6,8 @@ Data Abstraction & Problem Solving with C++
 978-013292372-9
 Carrano and Henry
 book
-Men and Women of Troy
-19.50
+Great Men and Women of Troy
+19.5
 5
 978-000000000-1
 Tommy Trojan
@@ -24,8 +24,9 @@ Hidden Figures DVD
 Drama
 PG
 </products>
+</products>
 <users>
-aturing 100.00 0
-johnvn 50.00 1
-adal 120.00 1
+aturing 100 0
+johnvn 50 1
+adal 120 1
 </users>

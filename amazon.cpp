@@ -10,6 +10,10 @@
 #include "product_parser.h"
 #include "util.h"
 
+#include "mydatastore.h"
+
+//#include "test.cpp" for the test only
+
 using namespace std;
 struct ProdNameSorter {
     bool operator()(Product* p1, Product* p2) {
@@ -29,7 +33,7 @@ int main(int argc, char* argv[])
      * Declare your derived DataStore object here replacing
      *  DataStore type to your derived type
      ****************/
-    DataStore ds;
+    Mydatastore ds;
 
 
 
@@ -51,6 +55,13 @@ int main(int argc, char* argv[])
         return 1;
     }
 
+    /****************************************************************/
+
+    // test_create(&ds); //for test only
+    // // test();
+    // test_keymap(&ds);
+
+    /****************************************************************/
     cout << "=====================================" << endl;
     cout << "Menu: " << endl;
     cout << "  AND term term ...                  " << endl;
@@ -100,7 +111,53 @@ int main(int argc, char* argv[])
                 done = true;
             }
 	    /* Add support for other commands here */
+            else if ( cmd == "ADD") {
+                string username;
+                int hit_index;
+               
+                if((ss>>username))
+                {
+                    if((ss>>hit_index))
+                    {
+                        username=convToLower(username);
+                         ds.AddtoCart(username, hits[hit_index-1]);
+                    }
+                    else{
+                        cout<<"Invalid request"<<endl;
+                    }
+                }else{
+                    cout<<"Invalid request"<<endl;
+                }
+                
+                
+                
+            }
+            else if( cmd == "VIEWCART")
+            {
+                string username;
+                if(!(ss>>username))
+                {
+                    cout<<"Invalid username"<<endl;
+                }
+                ds.ViewCart(username);
 
+            }
+            else if( cmd == "BUYCART")
+            {
+                string username;
+                if(!(ss>>username))
+                {
+                    cout<<"Invalid username"<<endl;
+                }
+                ds.BuyCart(username);
+
+            }
+            else if( cmd == "VIEWST")
+            {
+                
+                ds.ViewStore();
+
+            }
 
 
 

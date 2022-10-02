@@ -16,15 +16,32 @@ std::string convToLower(std::string src)
 std::set<std::string> parseStringToWords(string rawWords)
 {
 
-
-
-
-
-
-
-
-
-
+//replace all punctuation with space
+	for(unsigned int i=0; i< rawWords.size(); i++)
+	{
+		if(rawWords.at(i)=='\''||rawWords.at(i)==','||rawWords.at(i)=='.')
+		{
+			rawWords.at(i)=' ';
+		}
+	}
+	std::stringstream rawstream; //store rawWords into a string stream
+	rawstream << rawWords;
+	std::set<std::string> temp; //create a set to restore and return
+	string Kword;
+	while(rawstream>>Kword)
+	// iterate to set up temp
+	{
+		if(Kword.size()>=2) 
+		// character>=2
+		{
+			temp.insert(Kword);
+		}else
+		{
+			continue;
+		}
+	}
+	return temp; //memory leak
+	
 }
 
 /**************************************************
