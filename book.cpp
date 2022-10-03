@@ -105,4 +105,8 @@ void Book::setKeyword()
 	keywords_.insert(T_author.begin(),T_author.end());
 	set<string> T_name=parseStringToWords(convToLower(name_));
 	keywords_.insert(T_name.begin(),T_name.end());
+
+	cout<<"book keywords num="<<keywords_.size()<<endl;
+	cout<<"isbn bool"<<(keywords_.find(isbn_)!=keywords_.end())<<endl;
+	/*<test>*/
 }

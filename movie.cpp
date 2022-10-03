@@ -3,6 +3,8 @@
 #include "util.h"
 #include "movie.h"
 
+#include <iostream>
+
 using namespace std;
 
 Movie::Movie(const std::string category, const std::string name, double price, int qty, const string Genre, const string Rating) : 
@@ -104,4 +106,6 @@ void Movie::setKeyword()
 	keywords_.insert(convToLower(rating_));
 	set<string> T_name=parseStringToWords(convToLower(name_));
 	keywords_.insert(T_name.begin(),T_name.end());
+	cout<<"movie keywords num="<<keywords_.size()<<endl;
+	/*<test>*/
 }

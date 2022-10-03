@@ -57,16 +57,18 @@ public:
      User* findUser(std::string);
 
      
-
+		std::map<std::string, std::set<Product*>> Keywords_map_;
+		/*<test>*/
      
-
+		 void printKeywords( Product* );
+    /*<test>*/
 protected:
 		
 
     std::set<Product*> Store_products_;
 		std::set<User*> Store_users_;
     
-    std::map<std::string, std::set<Product*>> Keywords_map_;
+    
 		std::vector<Product*> Cart_;
 		std::map<User*, std::vector<Product*>> Store_carts_;
 

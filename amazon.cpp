@@ -12,7 +12,7 @@
 
 #include "mydatastore.h"
 
-//#include "test.cpp" for the test only
+#include "test.cpp" //for the test only
 
 using namespace std;
 struct ProdNameSorter {
@@ -59,7 +59,7 @@ int main(int argc, char* argv[])
 
     // test_create(&ds); //for test only
     // // test();
-    // test_keymap(&ds);
+    test_keymap(&ds);
 
     /****************************************************************/
     cout << "=====================================" << endl;

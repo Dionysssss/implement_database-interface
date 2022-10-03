@@ -3,6 +3,7 @@
 #include "movie.h"
 #include "util.h"
 #include "mydatastore.h"
+#include "user.h"
 #include <set>
 // #include "product.h"
 //#include "clothing.h"

@@ -105,4 +105,6 @@ void Clothing::setKeyword()
 	keywords_.insert(T_brand.begin(),T_brand.end());
 	set<string> T_name=parseStringToWords(convToLower(name_));
 	keywords_.insert(T_name.begin(),T_name.end());
+	cout<<"clothing keywords num="<<keywords_.size()<<endl;
+	/*<test>*/
 }

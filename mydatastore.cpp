@@ -254,19 +254,39 @@ User* Mydatastore::findUser(string Username)
 
 void Mydatastore::setupKeywordMap(Product* P)
 {
+	printKeywords(P);
+	cout<<"size="<<P->keywords().size()<<endl;
+         /*<test>*/
+
 	for(set<string>::iterator it=P->keywords().begin();
 			it!= P->keywords().end();
 			++it)
 			{
+				cout<<"keyword="<<*it<<endl;
+         /*<test>*/
+
 				if(Keywords_map_.find(*it)==Keywords_map_.end())
+				//no this keyword in the map
 				{
 					set<Product*> temp;
 					temp.insert(P);
 					Keywords_map_.insert(make_pair((*it),temp));
-				}else{
+				}else{// has this keyword already
 					Keywords_map_[*it].insert(P);
 				}
 			}
 	return;
 }
 
+void Mydatastore::printKeywords(Product* P)
+{
+	cout<<"key words from"<<P->getName()<<endl;
+	for(set<string>::iterator it = P->keywords().begin();
+			it != P->keywords().end();
+			++it)
+			{
+				cout<<*it<<endl;
+			}
+	cout<<endl;
+}
+/*<test>*/
