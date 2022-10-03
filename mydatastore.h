@@ -11,8 +11,6 @@ public:
 		Mydatastore();
 		~Mydatastore();
 
-		
-
     /**
      * Adds a product to the data store
      */
@@ -41,12 +39,19 @@ public:
 		 void AddtoCart(std::string, Product*);
 
 		/**
-		 *qty -1 empty the cart
+		 *qty -1 and empty the cart
 		 */
 		 void BuyCart( std::string );
 
+     /**
+		  *print out all items in the store
+		  */
      void ViewCart( std::string );
 
+    /**
+		  *View the Store items
+      *this is for test
+		  */
      void ViewStore();
 
     /*Accessors*/
@@ -56,10 +61,7 @@ public:
 
      User* findUser(std::string);
 
-     
-		std::map<std::string, std::set<Product*>> Keywords_map_;
-		/*<test>*/
-     
+    /*This is a test function to print all the keywords*/
 		 void printKeywords( Product* );
     /*<test>*/
 protected:
@@ -68,10 +70,9 @@ protected:
     std::set<Product*> Store_products_;
 		std::set<User*> Store_users_;
     
-    
 		std::vector<Product*> Cart_;
 		std::map<User*, std::vector<Product*>> Store_carts_;
-
+    std::map<std::string, std::set<Product*>> Keywords_map_;
     std::map<std::string, User*> Name_User_;
 
     void setupKeywordMap(Product*);

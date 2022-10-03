@@ -58,14 +58,6 @@ string Movie::displayString() const
 		out+="Genre: "+genre_+" Rating: "+rating_+"\n";
 		out+=to_string(price_)+" "+to_string(qty_)+" left";
 
-		// string out="keyword hints: ";
-		// set<string>::iterator it;
-		// for(it = keywords_.begin();
-		// 		it != keywords_.end();
-		// 		++it)
-		// 		{
-		// 			out+=*it+" ";
-		// 		}
 		return out;
 
 }
@@ -106,6 +98,5 @@ void Movie::setKeyword()
 	keywords_.insert(convToLower(rating_));
 	set<string> T_name=parseStringToWords(convToLower(name_));
 	keywords_.insert(T_name.begin(),T_name.end());
-	cout<<"movie keywords num="<<keywords_.size()<<endl;
-	/*<test>*/
+
 }

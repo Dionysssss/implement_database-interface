@@ -56,14 +56,6 @@ string Clothing::displayString() const
 		out+="Size: "+size_+" Brand: "+brand_+"\n";
 		out+=to_string(price_)+" "+to_string(qty_)+" left";
 
-		// string out="keyword hints: ";
-		// set<string>::iterator it;
-		// for(it = keywords_.begin();
-		// 		it != keywords_.end();
-		// 		++it)
-		// 		{
-		// 			out+=*it+" ";
-		// 		}
 		return out;
 
 }
@@ -105,6 +97,5 @@ void Clothing::setKeyword()
 	keywords_.insert(T_brand.begin(),T_brand.end());
 	set<string> T_name=parseStringToWords(convToLower(name_));
 	keywords_.insert(T_name.begin(),T_name.end());
-	cout<<"clothing keywords num="<<keywords_.size()<<endl;
-	/*<test>*/
+
 }

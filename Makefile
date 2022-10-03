@@ -6,6 +6,7 @@ CXXFLAGS=-g -Wall -std=c++11
 OBJS=amazon.o user.o db_parser.o product.o product_parser.o util.o  book.o clothing.o movie.o  mydatastore.o
 CLA=test_class.o book.o clothing.o movie.o product.o util.o mydatastore.o user.o
 
+
 all: amazon
 
 amazon: $(OBJS)
@@ -39,7 +40,6 @@ movie.o: movie.cpp movie.h
 
 mydatastore.o: mydatastore.cpp mydatastore.h
 	$(CXX) $(CXXFLAGS) $(DEFS) -o $@ -c $<
-
 
 
 

@@ -12,7 +12,7 @@
 
 #include "mydatastore.h"
 
-#include "test.cpp" //for the test only
+//#include "test.cpp" //for the test only
 
 using namespace std;
 struct ProdNameSorter {
@@ -57,9 +57,9 @@ int main(int argc, char* argv[])
 
     /****************************************************************/
 
-    // test_create(&ds); //for test only
+    // test_create(&ds); //for test only ignore it
     // // test();
-    test_keymap(&ds);
+    //test_keymap(&ds);
 
     /****************************************************************/
     cout << "=====================================" << endl;
@@ -152,7 +152,8 @@ int main(int argc, char* argv[])
                 ds.BuyCart(username);
 
             }
-            else if( cmd == "VIEWST")
+            else if( cmd == "VIEWST") 
+            //for test only, to see what products in the store
             {
                 
                 ds.ViewStore();

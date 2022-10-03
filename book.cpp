@@ -56,14 +56,7 @@ string Book::displayString() const
 		out+="Author: "+author_+" ISBN: "+isbn_+"\n";
 		out+=to_string(price_)+" "+to_string(qty_)+" left.";
 
-		// string out="keyword hints: ";
-		// set<string>::iterator it;
-		// for(it = keywords_.begin();
-		// 		it != keywords_.end();
-		// 		++it)
-		// 		{
-		// 			out+=*it+" ";
-		// 		}
+		
 		return out;
 
 }
@@ -106,7 +99,6 @@ void Book::setKeyword()
 	set<string> T_name=parseStringToWords(convToLower(name_));
 	keywords_.insert(T_name.begin(),T_name.end());
 
-	cout<<"book keywords num="<<keywords_.size()<<endl;
-	cout<<"isbn bool"<<(keywords_.find(isbn_)!=keywords_.end())<<endl;
-	/*<test>*/
+	
+
 }

@@ -37,5 +37,3 @@ protected:
 	void setKeyword();
 };
 #endif
-
-
