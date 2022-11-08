@@ -4,3 +4,9 @@ test.cpp
 test_class.cpp
 used.txt
 used_data.txt
+hw2_tests
+*.o
+database.out
+database2.out
+database_Add2U2.txt
+hw2_tests.tar.gz

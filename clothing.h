@@ -21,6 +21,7 @@ public:
      */
     std::string displayString() const ;
 
+    std::string displayCart() const;
     /**
      * Outputs the product info in the database format
      */

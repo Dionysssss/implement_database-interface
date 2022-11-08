@@ -56,8 +56,25 @@ string Clothing::displayString() const
 		out+="Size: "+size_+" Brand: "+brand_+"\n";
 		out+=to_string(price_)+" "+to_string(qty_)+" left";
 
+	
+
 		return out;
 
+}
+
+string Clothing::displayCart() const
+{
+		string out;    
+		out+="name: ";
+    out+=name_;
+    out+="\n";
+    out+="info: ";
+    out+="Size: "+size_+" Brand: "+brand_+"\n";
+    out+="stock: ";
+    out+=qty_;
+    out+="price: ";
+    out+=price_;
+    return out;
 }
 
 /**

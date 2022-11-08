@@ -19,6 +19,7 @@ DBParser::DBParser()
     error_ = false;
 
 }
+
 DBParser::~DBParser()
 {
     for(map<string, SectionParser*>::iterator it = parsers_.begin();

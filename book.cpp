@@ -61,6 +61,26 @@ string Book::displayString() const
 
 }
 
+string Book::displayCart() const
+{
+		//string display_out=new string;
+		//formate?
+		string out;
+		out+="name: ";
+    out+=name_;
+    out+="\n";
+    out+="info: ";
+    out+="Author: "+author_+" ISBN: "+isbn_+"\n";
+    out+="stock: ";
+    out+=qty_;
+    out+="price: ";
+    out+=price_;
+
+		
+		return out;
+
+}
+
 /**
 	* Outputs the product info in the database format
 	*/

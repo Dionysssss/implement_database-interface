@@ -11,7 +11,17 @@ Mydatastore::Mydatastore()
 
 Mydatastore::~Mydatastore()
 {
+	for(auto it = Store_products_.begin();
+            it != Store_products_.end();
+            ++it) {
+        delete *it;
+    }
 
+	for(auto it = Store_users_.begin();
+            it != Store_users_.end();
+            ++it) {
+        delete *it;
+    }
 }
 
 void Mydatastore::addProduct(Product* p)
@@ -128,7 +138,7 @@ void Mydatastore::AddtoCart(string Username, Product* P)
 	if(U== nullptr)
 	//check if the user is upon the list
 	{
-		cout<<"Can't find this user!"<<endl;
+		cout<<"Invalid request"<<endl;
 		return;
 	}
 
@@ -223,7 +233,7 @@ void Mydatastore::ViewCart( string user )
 			it != Store_carts_[U].end();
 			++it)
 			{
-				cout<<num_in_cart<<". "<<endl;
+				cout<<"Item "<<num_in_cart<<endl;
 				//cout<<"size="<<Store_carts_[U].size()<<endl;
 				cout<<(*it)->displayString()<<endl;
 				num_in_cart++;

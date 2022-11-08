@@ -110,6 +110,7 @@ int main(int argc, char* argv[])
                 }
                 done = true;
             }
+
 	    /* Add support for other commands here */
             else if ( cmd == "ADD") {
                 string username;
@@ -168,6 +169,10 @@ int main(int argc, char* argv[])
         }
 
     }
+
+    // delete userSectionParser;
+    // delete productSectionParser;
+    
     return 0;
 }
 

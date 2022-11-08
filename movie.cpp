@@ -62,6 +62,21 @@ string Movie::displayString() const
 
 }
 
+string Movie::displayCart() const
+{
+		string out;    
+		out+="name: ";
+    out+=name_;
+    out+="\n";
+    out+="info: ";
+    out+="Genre: "+genre_+" Rating: "+rating_+"\n";
+    out+="stock: ";
+    out+=qty_;
+    out+="price: ";
+    out+=price_;
+    return out;
+}
+
 /**
 	* Outputs the product info in the database format
 	*/

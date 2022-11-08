@@ -26,6 +26,8 @@ public:
      */
     virtual std::string displayString() const = 0;
 
+    virtual std::string displayCart() const = 0;
+
     /**
      * Outputs the product info in the database format
      */
